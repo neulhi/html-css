@@ -92,3 +92,14 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
 	background-color: lightgreen;
 	color: red;
 }
+
+h6:has(+ p) {
+	/* :has는 요소의 자식 또는 후손을 조건으로 부모를 선택할 수 있다. */
+	border: solid 1px green;
+	padding: 10px;
+}
+
+p:has(> strong) {
+	border: solid 1px red;
+	padding: 10px;
+}
