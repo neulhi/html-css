@@ -1,0 +1,72 @@
+body {
+	font-family: "Pretendard Variable", Pretendard, sans-serif;
+	margin: 20px;
+	border: 10px solid green;
+	padding: 50px;
+	color: darkblue;
+}
+
+/* leyer 선언 안 한 거 */
+p {
+	color: silver;
+}
+
+/* layer 그룹 내는 후순위 먼저 적용 */
+@layer techit, likelion;
+
+/* layer로 선언하면 layer 선언 안 한 거 보다 명시도가 낮음 */
+@layer likelion {
+	p {
+		color: red;
+	}
+
+}
+
+@layer techit {
+	p {
+		color: green !important; /* !important 가장 명시도가 높음 함부로 쓰면 안 됨 */
+	}
+}
+
+@layer likelion {
+	p {
+		color: red;
+	}
+
+}
+
+@layer techit {
+	p {
+		color: green;
+	}
+}
+
+@layer likelion {
+	h2 {
+		color: yellow;
+	}
+
+}
+
+@layer techit {
+	h2 {
+		color: tomato;
+	}
+}
+
+/* h1 {
+	color: green;
+}
+
+p {
+	color: orange;
+} */
+
+/* 띄어쓰기 없이 붙여서 사용하면 나를 선택하는 거 */
+/* #school.likelion {
+	color: gray;
+} */
+
+/* #school {
+	color: red;
+} */
