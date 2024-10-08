@@ -4,7 +4,7 @@ body {
   font-family: "Pretendard Variable", Pretendard, sans-serif;
 }
 
-/* px 단위 (브라우저 설정에서 글꼴 크기 변경 안됨) */
+/* px 단위 (브라우저 설정에서 글꼴 크기 변경 적용 안됨) */
 .unit-px {
   font-size: 20px;
 }
