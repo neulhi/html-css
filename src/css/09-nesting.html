@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 중첩 | Techit</title>
+    <!-- !font를 먼저 지정해야 성능(렌더링) 측면에서 더 좋다. -->
+    <!-- 로컬 방식 -->
+    <link rel="preload" as="style" href="./../assets/font/notoserif/notoserif.css" />
+    <link rel="stylesheet" href="./../assets/font/notoserif/notoserif.css" />
+    <link rel="preload" as="style" href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
+    <link rel="stylesheet" href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
+
+    <link rel="stylesheet" href="./styles/09-nesting.css" />
+  </head>
+  <body>
+    <h1>CSS 중첩</h1>
+		<div class="member">
+			<ul class="member__list">
+				<li class="member__item">
+					<a href="/" class="member__link">로그인</a>
+				</li>
+				<li class="member__item">
+					<a href="/" class="member__link">회원가입</a>
+				</li>
+				<li class="member__item">
+					<a href="/" class="member__link is--active">커뮤니티</a>
+				</li>
+				<li class="member__item">
+					<a href="/" class="member__link">문의사항</a>
+				</li>
+				<li class="member__item">
+					<a href="/" class="member__link">사이트맵</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="likilion"></div>
+			<ul class="likilion__list">
+				<li class="likilion__item">
+					<a href="/" class="likilion__link">로그인</a>
+				</li>
+				<li class="likilion__item">
+					<a href="/" class="likilion__link">회원가입</a>
+				</li>
+				<li class="likilion__item">
+					<a href="/" class="likilion__link is--active">커뮤니티</a>
+				</li>
+				<li class="likilion__item">
+					<a href="/" class="likilion__link">문의사항</a>
+				</li>
+				<li class="likilion__item">
+					<a href="/" class="likilion__link">사이트맵</a>
+				</li>
+			</ul>
+		</div>
+  </body>
+</html>
