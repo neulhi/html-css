@@ -42,9 +42,9 @@ h2 {
 /* 플렉스 아이템 / 기본값
 	flex-grow: 0; / 확대
 	flex-shrink: 1; / 축소
-	flex-basis: 0;  / 기본 크기
+	flex-basis: auto;  / 기본 크기
 	위 3가지 속성을 한 번에 설정하는 단축 속성
-	flex : 0 1 0; 
+	flex : 1 1 0; 
 */
 
 .flex-item1 {
