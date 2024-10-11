@@ -1,0 +1,63 @@
+@import "./../../common/base.css";
+
+
+.ui_box {
+	background-color: yellow;
+}
+
+.channel_list {
+	display: flex;
+	flex-flow: row wrap;
+	list-style: '';
+	padding-inline-start: 0;
+	inline-size: 60%;
+	margin-block: 0;
+	margin-inline: auto;
+	background-color: tomato;
+	gap: 1.5em;
+}
+
+.item {
+	flex: 1;
+	min-inline-size: 150px;
+	/* flex-basis: 100%; */
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 1em;
+	/* box-sizing: border-box; */
+	/* padding-inline: 5px; */
+
+	/* @media (min-width: 480px) {
+		flex-basis: 50%;
+	}
+
+	@media (min-width: 600px) {
+		flex-basis: 33.333%;
+	}
+
+	@media (min-width: 800px) {
+		flex-basis: 25%;
+	}
+
+	@media (min-width: 1000px) {
+		flex-basis: 20%;
+	} */
+}
+
+.thumb {
+	background-color: aqua;
+	aspect-ratio: 1/1;
+	border: 1px solid currentColor;
+}
+
+.image {
+	max-width: 100%;
+	max-inline-size: 100%;
+	/* 이미지 속성이 인라인 요소라서 여백 생기는 거 없애는 방법 3가지
+	 display: block; vertical-align: top; vertical-align: middle; */
+	vertical-align: middle;
+}
+
+.title {
+	block-size: 40px;
+}
