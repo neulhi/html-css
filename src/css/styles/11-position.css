@@ -7,7 +7,7 @@ div:not(#awebChromeHelper) {
 }
 
 /* 요소 박스 위치 지정(percentage value) */
-body div.percentage-value {
+.percentage-value {
 	border: 1px solid currentColor;
 	margin: 1em !important;
 	padding: 10px !important;
