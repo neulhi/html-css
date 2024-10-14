@@ -4,11 +4,11 @@
 }
 
 :focus-visible {
-  box-shadow: 0 0 2px 2px #03cc5c;
+  box-shadow: 0 0 2px 2px rgb(224, 86, 86, 0.85);
   border-radius: 4px;
 }
 
-input:focus-visible {
+:is(input[type="email"], input[type="password"], input[type="text"]):focus-visible{
   box-shadow: none;
 }
 
