@@ -1,0 +1,60 @@
+@import "./../../common/mini-reset.css";
+@import "./../../common/base.css";
+
+body {
+	margin: 50px;
+}
+
+h1, h2 {
+	margin-block: 20px;
+}
+
+.sns-list {
+	margin-block-start: 1.25rem;
+	background-color: yellow;
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 1rem;
+
+	.sns {
+		display: block;
+		inline-size: 1.875rem;
+		aspect-ratio: 1/1;
+		background-color: pink;
+		background-image: url(./../../assets/sprite/sns.png);
+	}
+
+	.facebook {
+		background-position: 0 0;
+	}
+
+	.instagram {
+		background-position: 50% 0;
+		/* background-position: -50px 0; */
+	}
+
+	.youtube {
+		background-position: 100% 0;
+		/* background-position: 100px 0; */
+	}
+}
+
+.icon-list {
+	display: flex;
+	flex-flow: row nowrap;
+	gap: 1rem;
+
+	a {
+		display: block;
+		inline-size: 1.5rem;
+		aspect-ratio: 1/1;
+		color: rgb(43, 236, 43);
+	}
+}
+
+.svg-container {
+	background-color: yellow;
+	width: 80px;
+	aspect-ratio: 1/1;
+	color: red;
+}

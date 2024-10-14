@@ -204,6 +204,7 @@ body {
   --blue: #007bff;
   --gray: #adb5bd;
   --base-size: 1rem;
+	
   --switch-size: calc(var(--base-size) * var(--horizontal-ratio));
   --horizontal-ratio: 3.5;
   --vertical-ratio: 1.5;
@@ -248,7 +249,7 @@ body {
     background-color: var(--switch-active-bg-color);
     border-color: var(--switch-active-border-color);
   }
-	
+
   input:checked + label {
     background-color: var(--switch-active-label-color);
     left: initial;

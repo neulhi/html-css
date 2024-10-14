@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS 스프라이트 | Techit</title>
+    <!-- !font를 먼저 지정해야 성능(렌더링) 측면에서 더 좋다. -->
+    <!-- 로컬 방식 -->
+    <link rel="preload" as="style" href="./../assets/font/notoserif/notoserif.css" />
+    <link rel="stylesheet" href="./../assets/font/notoserif/notoserif.css" />
+    <link rel="preload" as="style" href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
+    <link rel="stylesheet" href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
+
+    <link rel="stylesheet" href="./styles/16-sprites.css" />
+  </head>
+  <body>
+    <!-- 배경이미지(아이콘 모음)파일을 1개만 불러와서 성능 최적화 -->
+    <h1>CSS 스프라이트</h1>
+    <h2>비트맵 이미지(배경)</h2>
+    <ul class="sns-list">
+      <!-- aria-label=""는 인터렉션 요소에 주로 사용 -->
+      <li><a href="/" class="sns facebook" aria-label="페이스북"></a></li>
+      <li><a href="/" class="sns instagram" aria-label="인스타그램"></a></li>
+      <li><a href="/" class="sns youtube" aria-label="유튜브"></a></li>
+    </ul>
+
+    <h2>벡터 이미지(svg 요소)</h2>
+    <ul class="icon-list">
+      <li>
+        <a href="">
+          <svg role="img" class="svg-icon" viewBox="0 0 24 24">
+            <use href="./../assets/sprite/icons.svg#triangle" />
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <svg role="img" class="svg-icon" viewBox="0 0 24 24">
+            <use href="./../assets/sprite/icons.svg#arrow" />
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <svg role="img" class="svg-icon" viewBox="0 0 24 24">
+            <use href="./../assets/sprite/icons.svg#global" />
+          </svg>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <svg role="img" class="svg-icon" viewBox="0 0 24 24">
+            <use href="./../assets/sprite/icons.svg#checkbox" />
+          </svg>
+        </a>
+      </li>
+    </ul>
+
+		<div class="svg-container">
+			<svg role="img" class="svg-icon" viewBox="0 0 24 24">
+				<use href="./../assets/svg/shape/_sprite.svg#circle" />
+			</svg>
+		</div>
+		<div class="svg-container">
+			<svg role="img" class="svg-icon" viewBox="0 0 24 24">
+				<use href="./../assets/svg/shape/_sprite.svg#star" />
+			</svg>
+		</div>
+		<div class="svg-container">
+			<svg role="img" class="svg-icon" viewBox="0 0 24 24">
+				<use href="./../assets/svg/shape/_sprite.svg#sub" />
+			</svg>
+		</div>
+
+  </body>
+</html>
