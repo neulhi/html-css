@@ -2,22 +2,31 @@
 @import "./../../common/a11y.css";
 
 :root {
-	/* 색상 */
+  /* 색상 */
   --dark-gray: #333;
   --white: #fff;
   --gray: #999;
   --green: #03cf5d;
+  --silver: #dadada;
 
-	/* 아이콘 크기 */
-	--size-sm: 0.75rem;
-	--size-base: 1rem;
-	--size-md: 1.25rem;
-	--size-lg: 1.5rem;
+  /* 아이콘 크기 */
+  --size-sm: 0.75rem;
+  --size-base: 1rem;
+  --size-md: 1.25rem;
+  --size-lg: 1.5rem;
+
+  /* 글자 크기 */
+  --text-sm: 0.75rem;
+  --text-base: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
 }
 
 /* 기본 박스 사이징 */
-*, *::before, *::after {
-	box-sizing: border-box;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 /* 임시 스타일 */
@@ -47,19 +56,19 @@ body {
 
 /* 체크박스 컴포넌트 (checkbox) */
 .checkbox {
-	position: relative;
+  position: relative;
 
-	.checkbox__input {
-		--icon-size: var(--size-lg, 1.5rem);
+  .checkbox__input {
+    --icon-size: var(--size-lg, 1.5rem);
 
-		position: absolute;
-		inset-inline-start: 0;
-		inset-block-start: 0;
-		margin: 0;
-		inline-size: var(--icon-size);
-		aspect-ratio: 1/1;
-		appearance: none; /* 기본 모양 숨기기 */
-	}
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    margin: 0;
+    inline-size: var(--icon-size);
+    aspect-ratio: 1/1;
+    appearance: none; /* 기본 모양 숨기기 */
+  }
 
   .checkbox__label {
     display: flex;
@@ -91,10 +100,31 @@ body {
 
 /* 입력 서식 컴포넌트 (input) : 숨김 레이블 유형 */
 .input {
-	background-color: yellow;
+  --border-color: var(--silver, #dadada);
+  --text-color: var(--dark-gray, #333);
+  --text-size: var(--text-base, 0.875rem);
 
-	.input__input {
-		border: 1px solid red;
-		inline-size: 100%;
-	}
+  font-size: var(--text-size);
+  color: var(--text-color);
+
+  .input__input {
+    border: 1px solid var(--border-color);
+    inline-size: 100%;
+    block-size: 3rem;
+    padding: 0.875rem;
+
+    &:user-invalid + .input__error-message span {
+      visibility: visible;
+    }
+  }
+
+  .input__error-message {
+    color: #ff1414;
+    font-size: 0.75rem;
+    margin: 0.5rem 0 0 0;
+
+    span {
+      visibility: hidden;
+    }
+  }
 }
