@@ -6,7 +6,13 @@ textarea {
   font: inherit;
 }
 
+/* 박스 사이징 */
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
 /* 기본 스타일 */
 body {
   font-family: "Pretendard Variable", Pretendard, sans-serif;
+	margin: 50px;
 }
