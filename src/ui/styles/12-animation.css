@@ -5,78 +5,172 @@ h1, h2, button {
 	margin-block: 1rem;
 }
 
-.button--burger {
-	inline-size: 24px;
-	block-size: 24px;
-	position: relative;
-	background-color: transparent;
-	border: 0;
-	padding: 0;
-	overflow: hidden;
+/* Position을 활용한 햄버거 버튼 애니메이션 */
+.button--burger-position {
+  inline-size: 24px;
+  block-size: 24px;
+  position: relative;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
 
-	.burger-bar {
-		position: absolute;
-		inset-inline: 0;
-		block-size: 20%;
-		background-color: currentColor;
-		border-radius: 100px;
-		transition: all 0.2s;
-	}
+  .burger-bar {
+    position: absolute;
+    inset-inline: 0;
+    block-size: 20%;
+    background-color: currentColor;
+    border-radius: 100px;
+    transition: all 0.2s;
+  }
 
-	.burger-bar-top {
-		inset-block-start: 0;
-	}
+  .burger-bar-top {
+    inset-block-start: 0;
+  }
 
-	.burger-bar-middle {
-		inset-block-start: 50%;
-		translate: 0 -50%;
-		/* transform: translateY(-50%); */
-	}
+  .burger-bar-middle {
+    inset-block-start: 50%;
+    translate: 0 -50%;
+    /* transform: translateY(-50%); */
+  }
 
-	.burger-bar-bottom {
-		inset-block-start: 100%;
-		translate: 0 -100%;
-		/* transform: translateY(-100%); */
-	}
+  .burger-bar-bottom {
+    inset-block-start: 100%;
+    translate: 0 -100%;
+    /* transform: translateY(-100%); */
+  }
 
-	&:hover {
-		.burger-bar-top {
-			inset-block-start: 50%;
-			translate: 0 -50%;
-			rotate: -45deg;
-			/* transform: translateY(-50%) rotate(45deg); */
-		}
+  &:hover {
+    .burger-bar-top {
+      inset-block-start: 50%;
+      translate: 0 -50%;
+      rotate: -45deg;
+      /* transform: translateY(-50%) rotate(45deg); */
+    }
 
-		.burger-bar-middle {
-			translate: 120% -50%;
-			/* transform: translate(120%, -50%); */
-		}
+    .burger-bar-middle {
+      /* transform: translate(120%, -50%); */
+      translate: 120% -50%;
+    }
 
-		.burger-bar-bottom {
-			inset-block-start: 50%;
-			translate: 0 -50%;
-			rotate: 45deg;
-			/* transform: translateY(-50%) rotate(-45deg); */
-		}
-	}
+    .burger-bar-bottom {
+      inset-block-start: 50%;
+      translate: 0 -50%;
+      rotate: 45deg;
+      /* transform: translateY(-50%) rotate(-45deg); */
+    }
+  }
 }
 
+
+/* Flexbox를 활용한 햄버거 버튼 애니메이션 */
+.button--burger-flex {
+  inline-size: 24px;
+  block-size: 24px;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+
+  .burger-bar {
+    inline-size: 100%;
+    block-size: 20%;
+    background-color: currentColor;
+    border-radius: 100px;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    justify-content: center;
+
+    .burger-bar-top {
+      translate: 0 100%;
+      rotate: -45deg;
+    }
+
+    .burger-bar-middle {
+      translate: 120% 0;
+    }
+
+    .burger-bar-bottom {
+      translate: 0 -100%;
+      rotate: 45deg;
+    }
+  }
+}
+
+/* Gridbox를 활용한 햄버거 버튼 애니메이션 */
+.button--burger-grid {
+  --size: 24px;
+  inline-size: var(--size);
+  block-size: var(--size);
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: var(--size);
+  grid-template-rows: var(--size);
+
+  .burger-bar {
+    grid-area: 1 / 1 / 2 / 2;
+    block-size: 20%;
+    background-color: currentColor;
+    border-radius: 100px;
+    transition: all 0.2s;
+  }
+
+  .burger-bar-top {
+    align-self: start;
+  }
+
+  .burger-bar-middle {
+    align-self: center;
+  }
+
+  .burger-bar-bottom {
+    align-self: end;
+  }
+
+  &:hover {
+    .burger-bar {
+      align-self: center;
+    }
+
+    .burger-bar-top {
+      rotate: -45deg;
+    }
+
+    .burger-bar-middle {
+      translate: 120% 0;
+    }
+
+    .burger-bar-bottom {
+      rotate: 45deg;
+    }
+  }
+}
+
+/* 로딩 애니메이션 */
 @keyframes spinner {
-	0% {
-		rotate: 0deg;
-	}
-
-	100% {
-		rotate: 360deg;
-	}
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
 }
 
+/* SVG 로딩 애니메이션 */
 .loading-spinner {
-	inline-size: 48px;
-	block-size: 48px;
-	color: var(--red);
+  inline-size: 48px;
+  block-size: 48px;
+  color: var(--red);
 
-	svg {
-		animation: spinner 1s infinite steps(12);
-	}
+  svg {
+    animation: spinner 1s infinite steps(12);
+  }
 }
