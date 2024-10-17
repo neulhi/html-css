@@ -1,0 +1,83 @@
+@import "./../../common/modern-reset.css";
+@import "./../../common/base.css";
+
+/* Tab UI */
+.tab-container {
+  margin-block: 1rem;
+  /* background-color: var(--yellow); */
+  /* inline-size: 380px; */
+  position: relative;
+}
+
+/* 하늘 */
+.tab-list {
+  display: flex;
+  flex-flow: row nowrap;
+
+  .tab {
+    background-color: #ddd;
+    border: 1px solid var(--gray);
+    padding: 0.625rem;
+    border-radius: 0.25rem 0.25rem 0 0;
+
+    &:focus {
+      background-color: var(--white);
+      border: 1px solid orangered;
+      border-bottom: 0;
+      color: orangered;
+    }
+  }
+}
+
+.tab-panel {
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: 0.875rem;
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 0.75rem;
+		container: span-wrapper / inline-size;
+
+    a {
+			flex: 1;
+      color: currentColor;
+      text-decoration: none;
+
+      span {
+        font-weight: normal;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        inline-size: 19.375rem;
+
+				@container span-wrapper (inline-size > 23.75rem) {
+					width: 100%;
+				}
+
+        &::before {
+          padding-inline-end: 0.25rem;
+        }
+
+				time {
+					flex: 0 0 auto;
+				}
+      }
+    }
+
+  }
+
+  .fa-plus {
+    color: #447231;
+    font-weight: 900;
+  }
+
+  > a {
+    color: currentColor;
+    text-decoration: 0;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-end: 0;
+  }
+}

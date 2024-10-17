@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tab UI | Techit</title>
+    <!-- !font를 먼저 지정해야 성능(렌더링) 측면에서 더 좋다. -->
+    <!-- 로컬 방식 -->
+    <link rel="preload" as="style" href="./../assets/font/notoserif/notoserif.css" />
+    <link rel="stylesheet" href="./../assets/font/notoserif/notoserif.css" />
+    <link rel="preload" as="style" href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
+    <link rel="stylesheet" href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
+		<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css' integrity='sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==' crossorigin='anonymous'/>
+    <link rel="stylesheet" href="./styles/15-tab-ui.css" />
+  </head>
+  <body>
+    <h1>Tab UI</h1>
+
+		<div class="tab-container">
+
+			<div class="tab-list" role="tab-list">
+				<button type="button" class="tab" role="tab" id="tab-1" aria-selected="true" aria-controls="tab-panel-1">공지사항</button>
+				<button type="button" class="tab" role="tab" id="tab-2" aria-selected="false" aria-controls="tab-panel-2">자료실</button>
+			</div>
+
+			<div class="tab-panel tab-panel-1" role="tab-panel" id="tab-panel-1" aria-labelledby="tab-1">
+				<ul>
+					<li>
+						<a href="/">
+							<span class="fas fa-circle-dot">HTML의 모든 것을 알려주마 샘플 활용법</span>
+						</a> <time datetime="2024-10-17T15:30:15">2024.10.17</time>
+					</li>
+					<li>
+						<a href="/">
+							<span class="fas fa-circle-dot">W3C 사이트 리뉴얼 및 공지사항</span>
+						</a> <time datetime="2024-10-17T15:30:15">2024.10.17</time>
+					</li>
+					<li>
+						<a href="/">
+							<span class="fas fa-circle-dot">KWCAG 2.1 소식</span>
+						</a> <time datetime="2024-10-17T15:30:15">2024.10.17</time>
+					</li>
+					<li>
+						<a href="/">
+							<span class="fas fa-circle-dot">서버 점검으로 인한 사이트 이용안내 입니다.</span>
+						</a> <time datetime="2024-10-17T15:30:15">2024.10.17</time>
+					</li>
+					<li>
+						<a href="/">
+							<span class="fas fa-circle-dot">여러분들이 생각하는 웹 접근성에 대해 이야기를...</span>
+						</a> <time datetime="2024-10-17T15:30:15">2024.10.17</time>
+					</li>
+				</ul>
+
+				<a href="/">
+					<span class="fas fa-plus" aria-hidden="true" title="공지사항"></span>
+					더보기
+				</a>
+			</div>
+
+			<!-- <div class="tab-panel tab-panel-2" role="tab-panel" id="tab-panel-2" aria-labelledby="tab-2">
+				<ul>
+					<li>
+						<a href="/"><span class="fas fa-circle-dot">여러분들이 생각하는 웹 접근성에 대해 이야기를...</span></a> <time datetime="2024-10-17T15:30:15">2024.10.17</time>
+					</li>
+					<li>
+						<a href="/"><span class="fas fa-circle-dot">KWCAG 2.1 소식</span></a> <time datetime="2024-10-17T15:30:15">2024.10.17</time>
+					</li>
+					<li>
+						<a href="/"><span class="fas fa-circle-dot">HTML의 모든 것을 알려주마 샘플 활용법</span></a> <time datetime="2024-10-17T15:30:15">2024.10.17</time>
+					</li>
+					<li>
+						<a href="/"><span class="fas fa-circle-dot">W3C 사이트 리뉴얼 및 공지사항</span></a> <time datetime="2024-10-17T15:30:15">2024.10.17</time>
+					</li>
+					<li>
+						<a href="/"><span class="fas fa-circle-dot">서버 점검으로 인한 사이트 이용안내 입니다.</span></a> <time datetime="2024-10-17T15:30:15">2024.10.17</time>
+					</li>
+				</ul>
+				<a href="/"><span class="fas fa-plus" aria-hidden="true" title="자료실"></span>더보기</a>
+			</div> -->
+
+		</div>
+
+  </body>
+</html>
