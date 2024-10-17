@@ -1,0 +1,43 @@
+body {
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+	color: #121212;
+}
+
+a {
+	text-decoration: none;
+	color: currentColor;
+}
+
+h1 {
+  text-align: center;
+  margin: 0;
+	padding-block: 6.25rem 3.125rem;
+}
+
+ul {
+	padding: 0;
+}
+
+.learn-container {
+	max-inline-size: 1440px;
+  margin-inline: auto;
+	display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+	justify-items: center;
+
+  div {
+		display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+
+		ul li {
+			padding-block-end: .625rem;
+		}
+  }
+}
